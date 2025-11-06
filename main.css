@@ -1,20 +1,47 @@
+:root {
+  --mtavari-feri: #32a852;
+  --secondary-color: rgb(56, 6, 150);
+
+  --fontis-zoma: 20px;
+  --space: 60px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  background-color: aliceblue;
-
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+h1 {
+  color: var(--mtavari-feri);
 }
 
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+p {
+  color: var(--secondary-color);
+  font-size: var(--fontis-zoma);
+}
+
+.row {
+  display: flex;
+  gap: 50px;
+}
+
+.row div {
+  color: var(--secondary-color);
+  margin-top: calc(var(--space) / 2);
+  margin-left: calc(var(--space) / 2);
+  border: solid 1px grey;
+  padding: 20px;
+}
+
+.row div:first-child {
+  border-color: red;
+}
+
+.row div:last-child {
+  border-color: blue;
+}
+
+.row div:nth-child(even) {
+  background-color: brown;
 }
